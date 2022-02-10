@@ -1,0 +1,13 @@
+*,
+ ::before,
+ ::after {
+    font-weight: normal;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(to-right, blue, green);
+}
