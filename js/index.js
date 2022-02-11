@@ -43,6 +43,10 @@ class Calculator {
                 result = prev - curr;
                 break;
             case '/':
+                if (curr === 0) {
+                    this.clear();
+                    return;
+                }
                 result = prev / curr;
                 break;
             case '*':
