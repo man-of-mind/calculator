@@ -7,7 +7,7 @@ class Calculator {
 
     clear() {
         this.previousOperand = '';
-        this.currrentOperand = '';
+        this.currrentOperand = 0;
         this.operation = undefined;
     }
 
@@ -17,12 +17,13 @@ class Calculator {
 
     appendNumber(number) {
         if (number === '.' && this.currrentOperand.includes('.')) return
+        if (this.currrentOperand === 0) this.currrentOperand = '';
         this.currrentOperand = this.currrentOperand.toString() + number.toString();
     }
 
     chooseOperation(operation) {
         this.operation = operation;
-        if (this.currrentOperand.toString() === '') return;
+        if (this.currrentOperand.toString() === '' || this.currrentOperand === 0) return;
         if (this.previousOperand !== '') {
             this.compute();
         }

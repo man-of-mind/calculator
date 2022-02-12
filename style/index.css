@@ -2,21 +2,21 @@
  ::before,
  ::after {
     font-weight: normal;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     padding: 0px;
     margin: 0px;
-    background-image: linear-gradient(to right, rgb(187, 214, 68), rgb(114, 52, 111));
+    background-color: rgb(74, 173, 206);
+    height: 100vh;
 }
 
 .calculator-body {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 80px);
     grid-template-rows: minmax(120px, auto) (4, 100px);
     min-height: 100vh;
 }
@@ -24,7 +24,9 @@ body {
 .calculator-body button {
     border: 1px solid white;
     font-size: 2rem;
+    margin: 0 0 2px 0;
     cursor: pointer;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, .65);
 }
 
@@ -52,6 +54,8 @@ body {
     background-color: rgba(0, 0, 0, .75);
     padding: 10px;
     min-height: 5.5rem;
+    margin-bottom: 5px;
+    border-radius: 20px;
 }
 
 .output-screen .previous-operand {
